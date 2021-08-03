@@ -1,13 +1,13 @@
 USE people;
-DROP TABLE IF EXISTS employees;
-DROP TABLE IF EXISTS jobs;
 
 CREATE TABLE jobs
 (
-    job_id INT IDENTITY(1,1) PRIMARY KEY
-    job_name VARCHAR(10),
+    job_id INT IDENTITY(1,1) PRIMARY KEY,
+    job_name VARCHAR(20),
     job_salary INT NOT NULL,
 );
+
+go 
 
 CREATE TABLE employees
 (
@@ -17,3 +17,4 @@ CREATE TABLE employees
     salary INT NOT NULL
 );
 
+go
