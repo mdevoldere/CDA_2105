@@ -10,7 +10,7 @@ go
 CREATE TABLE jobs
 (
     job_id INT IDENTITY(1,1) PRIMARY KEY,
-    job_name VARCHAR(20),
+    job_name VARCHAR(20) NOT NULL,
     job_salary INT NOT NULL,
 );
 

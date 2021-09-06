@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.block,
+h1 {
+    display: block;
+    background: lightcoral;
+    margin: 32px;
+    /*padding: 50px;*/
+    width: 300px;
+    border: 1px solid blue;
+}
+
+.inline {
+    display: inline;
+    background: lightgreen;
+}
+
+.inline-block {
+    display: inline-block;
+    background: lightseagreen;
+}

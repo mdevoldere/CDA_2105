@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu > li {
+    display: inline-block;
+}
+
+.menu a {
+    display:block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid black;
+    background: deeppink;
+    color: yellow;
+    transition: all ease 6000ms;
+}
+
+.menu a:hover {
+    background: black;
+    transform: scale(2) rotate(10080deg);
+}
+
+.block,
+h1 {
+    display: block;
+    background: lightcoral;
+    margin: 0;
+    width: 300px;
+    border: 1px solid blue;
+}
+
+.inline {
+    display: inline;
+    background: lightgreen;
+}
+
+.inline-block {
+    display: inline-block;
+    background: lightseagreen;
+}
