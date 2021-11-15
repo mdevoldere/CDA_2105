@@ -27,6 +27,7 @@ article {
 
 article:first-child {
     flex-basis: 300px;
+    width: 300px;
 }
 
 article:last-child {

@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.heading {
+    background: #99CCFF;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.heading > img {
+    height: 100px;
+}
+
+.heading > h1 {
+    flex-basis: 60%;
+    margin: 0;
+}
+
+.heading h2 {
+    font-size: 2rem;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.heading aside {
+    text-align: right;  
+    flex-basis: 100%;  
+    padding: 0 2rem;
+}
+
+.heading aside:last-child {
+    font-style: italic;
+    text-align: center;
+}
