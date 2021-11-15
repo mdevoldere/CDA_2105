@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+    width: 1440px;
+    max-width:100%;
+    background-color: lightgreen;
+    display:flex;
+    /*flex-direction: row; 
+    flex-wrap: wrap;*/
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content:flex-start;
+    align-items: stretch;
+}
+
+article {
+    flex-basis: 200px;
+    background-color: pink;
+    border: 1px solid black;
+}
+
+article:first-child {
+    flex-basis: 300px;
+}
+
+article:last-child {
+    background-color: crimson;
+}
+
+article:nth-child(3), article:nth-child(4) {
+    color: white;
+    background: darkblue;
+}
+
+article:nth-child(even) {
+    background: darkorange;
+}
+

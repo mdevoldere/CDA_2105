@@ -6,14 +6,32 @@ body {
     margin: 0;
 }
 
-.menu {
+
+
+
+
+.menu, .menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
+.menu {
+    margin-bottom: 3000px;
+}
 .menu > li {
     display: inline-block;
+    position:relative;
+}
+
+.menu ul {
+    display:none;
+} 
+
+.menu li:hover ul {
+    display: block;
+    position: absolute;
+    top:100%;
+    left: 0;
 }
 
 .menu a {
@@ -23,12 +41,13 @@ body {
     border: 1px solid black;
     background: deeppink;
     color: yellow;
-    transition: all ease 6000ms;
+    white-space: nowrap;
+    /*transition: all ease 6000ms;*/
 }
 
 .menu a:hover {
     background: black;
-    transform: scale(2) rotate(10080deg);
+    /*transform: scale(2) rotate(10080deg);*/
 }
 
 .block,
@@ -38,6 +57,10 @@ h1 {
     margin: 0;
     width: 300px;
     border: 1px solid blue;
+}
+
+h1 {
+    margin-bottom: 3000px;
 }
 
 .inline {
