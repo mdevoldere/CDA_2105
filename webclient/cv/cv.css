@@ -42,3 +42,31 @@ body {
     font-style: italic;
     text-align: center;
 }
+
+main {
+    display:flex;
+    flex-flow: column nowrap;
+    gap: 1%;
+}
+
+
+@media (min-width: 480px) {
+    
+}
+
+@media (min-width: 960px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .left {
+        flex-basis: 20%;
+    }
+    .right {
+        flex-basis: 79%;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+}
