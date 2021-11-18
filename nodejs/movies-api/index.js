@@ -1,10 +1,17 @@
 
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 const router = express.Router(); 
 
 var json = require(__dirname + '/movies.json');
+
+app.use(cors({
+    origin: 'http://localhost:9000',
+    optionsSuccessStatus: 200
+}));
+
 
 // app.get('/', function(req, res) {
 

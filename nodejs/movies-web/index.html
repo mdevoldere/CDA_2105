@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <script src="./assets/js/vue.global.js"></script>
     <script src="./assets/js/main.js" type="module"></script>
@@ -25,6 +25,17 @@
 
     <main id="app">
         <h2>{{ title }}</h2>
+        <section class="movies">
+            <article v-for="movie of db.data">
+                <h3>{{ movie.movie_title }}</h3>
+                <ul>
+                    <li>Genre: {{ movie.movie_subject }}</li>
+                    <li>Année: {{ movie.movie_year }}</li>
+                    <li>Durée: {{ movie.movie_length }}</li>
+                    <li>Acteurs: {{ movie.movie_actor }}, {{ movie.movie_actress }}</li>
+                </ul>
+            </article>
+        </section>
     </main>
 
     <footer class="footer">

@@ -77,6 +77,18 @@ a:hover, a:focus {
     padding: 1rem;
 }
 
+.movies {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    row-gap: .5rem;
+}
+
+.movies article {
+    background-color: #FFFFFF33;
+    flex-basis: 24%;
+}
+
 @media (min-width: 1024px) {
     .menu {
         flex-basis: auto;
