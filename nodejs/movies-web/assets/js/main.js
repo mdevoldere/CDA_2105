@@ -1,6 +1,5 @@
 import { DbMovies } from './movies.js';
 
-
 const moviesApp = {
     data() {
         return {
