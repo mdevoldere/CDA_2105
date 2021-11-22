@@ -39,7 +39,7 @@
                     <option v-for="category in categories" :value="category">{{ category }}</option>
                 </select>
 
-                <movie v-for="mov of db.data" :info="mov"></movie>
+                <movie v-for="mov in moviesByCat" :info="mov"></movie>
             </section>
             
         </main>

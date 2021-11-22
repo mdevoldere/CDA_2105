@@ -51,6 +51,7 @@ body {
 }
 
 a {
+    cursor: url('../img/dino.cur'), pointer;    
     text-decoration: none;
     color: var(--lnk);
 }
