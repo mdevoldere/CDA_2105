@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cereals</title>
+    <style>
+
+        :root { 
+            --bg: darkblue;
+            --txt: pink;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+               
+            --bg: yellow;
+            --txt: blue;
+            }
+        }
+
+        body {
+            color: var(--txt);
+            background-color: var(--bg);
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <h1>Salut</h1>
+    <form name="monform">
+        <input type="checkbox" name="toto[]">
+        <input type="checkbox" name="toto[]">
+        <input type="checkbox" name="toto[]">
+        
+        
+        <hr>
+
+        <input type="radio" name="tata">
+        <input type="radio" name="tata">
+        <input type="radio" name="aaa">
+
+        <button type="submit">Ok</button>
+    </form>
+    <h1>Mon titre</h1>
+    <button>TOTO</button>
+    <button disabled="disabled">TOTO</button>
+   
+    <script>
+        document.forms.monform.addEventListener('submit', function subForm(e) {
+            e.preventDefault();
+            console.log('', document.forms.monform.elements['toto[]'], '');
+            console.log('', document.forms.monform.elements[0], '');
+        });
+    </script>
+</body>
+</html>

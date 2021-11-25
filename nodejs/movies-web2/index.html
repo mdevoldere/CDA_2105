@@ -17,8 +17,8 @@
                 <ul>
                     <li><a href="#" @click="tabClick" data-tab="all" class="fa fa-home"></a></li>
                     <li><a href="#" @click="tabClick" data-tab="cats">Catégories</a></li>
-                    <li><a href="#">Années</a></li>
-                    <li><a href="#">Acteurs</a></li>
+                    <li><a href="#" @click="tabClick" data-tab="years">Années</a></li>
+                    <li><a href="#" @click="tabClick" data-tab="actors">Acteurs</a></li>
                     <li><a href="#">Films primés</a></li>
                 </ul>
             </nav>
@@ -38,8 +38,23 @@
                     <option value="">No category</option>
                     <option v-for="category in categories" :value="category">{{ category }}</option>
                 </select>
-
                 <movie v-for="mov in moviesByCat" :info="mov"></movie>
+            </section>
+
+            <section v-if="page == 'years'">
+                <h2>Films par années</h2>
+                <nav class="menu">
+                    <ul>
+                        <li v-for="year in years">
+                            <a @click="yearClick">{{ year }}</a>
+                        </li>
+                    </ul>
+                </nav>
+                <movie v-for="mov in moviesByYear" :info="mov"></movie>
+            </section>
+
+            <section v-if="page == 'actors'">
+                
             </section>
             
         </main>

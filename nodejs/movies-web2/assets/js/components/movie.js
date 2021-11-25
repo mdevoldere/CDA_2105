@@ -1,9 +1,9 @@
-import { likeComponent } from "./movie-like.js";
+// import { likeComponent } from "./movie-like.js";
 
 const movieComponent = {
 
     components: {
-        'movie-like': likeComponent
+       // 'movie-like': likeComponent
     },
     
     data() {
@@ -30,7 +30,6 @@ const movieComponent = {
             <li>Durée: {{ info.movie_length }}</li>
             <li>Acteurs: {{ info.movie_actor }}, {{ info.movie_actress }}</li>
         </ul>
-        <movie-like :movie="info"></movie-like>
         </article>`
 }
 

@@ -19,7 +19,8 @@ const moviesApp = {
             title: "Mes films",
             db: new DbMovies('http://localhost/movies'), // cf DbMovies.js
             page: "all", 
-            cat: ""
+            cat: "",
+            year: "",
         };
     },
 
@@ -33,6 +34,18 @@ const moviesApp = {
         }, 
         moviesByCat() {
             return this.db.getMoviesByCategory(this.cat); 
+        },
+        years() {
+            return this.db.getYears();
+        },
+        moviesByYear() {
+            return this.db.getMoviesByYear(this.year);
+        },
+        actors() {
+
+        },
+        moviesByActor(_actor) {
+
         }
     },
 
@@ -45,12 +58,11 @@ const moviesApp = {
         catSelect(event) {
             let options = event.target.options;
             let val = options[options.selectedIndex];
-           
-            //console.log(typeof(val.value));
-            // console.log(this.db.getMoviesByCategory(''));
-            // console.log(this.db.getMoviesByCategory(val.value));
-
             this.cat = val.value
+        },
+
+        yearClick(event) {
+            this.year = event.target.innerText;
         }
     }
 };
