@@ -22,6 +22,7 @@ class Db
             return response.json();
         }).then((json) => {
             this.data = json.data;
+            return thiss;
         });
     }
 }
