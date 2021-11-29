@@ -54,7 +54,11 @@
             </section>
 
             <section v-if="page == 'actors'">
-                
+                <input @input="searchInput" type="search" name="search" value="" list="lol">
+                <datalist id="lol">
+                    <option v-for="actor in actors" :value="actor">
+                </datalist>
+                <movie v-for="mov in results" :info="mov"></movie>
             </section>
             
         </main>

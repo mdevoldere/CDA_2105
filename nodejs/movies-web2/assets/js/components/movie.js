@@ -28,7 +28,7 @@ const movieComponent = {
             <li>Genre: {{ info.movie_subject }}</li>
             <li>Année: {{ info.movie_year }}</li>
             <li>Durée: {{ info.movie_length }}</li>
-            <li>Acteurs: {{ info.movie_actor }}, {{ info.movie_actress }}</li>
+            <li>Acteurs: {{ info.movie_actor }} ; {{ info.movie_actress }}</li>
         </ul>
         </article>`
 }

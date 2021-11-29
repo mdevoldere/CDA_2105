@@ -21,6 +21,7 @@ const moviesApp = {
             page: "all", 
             cat: "",
             year: "",
+            results: [],
         };
     },
 
@@ -42,7 +43,7 @@ const moviesApp = {
             return this.db.getMoviesByYear(this.year);
         },
         actors() {
-
+            return this.db.getActors();
         },
         moviesByActor(_actor) {
 
@@ -51,18 +52,27 @@ const moviesApp = {
 
     methods: {
         tabClick(event) {
-            console.log(event.target.dataset);
+            //console.log(event.target.dataset);
             this.page = event.target.dataset.tab;
         },
 
         catSelect(event) {
             let options = event.target.options;
             let val = options[options.selectedIndex];
-            this.cat = val.value
+            this.cat = val.value;
         },
 
         yearClick(event) {
             this.year = event.target.innerText;
+        },
+
+        searchInput(event) { 
+            let val = event.target.value; // attribut "value" de l'input search
+
+            if(val.length < 1 || val.length > 2) {
+                this.results = this.db.getMoviesByActor(val);
+                //console.log(val, results);
+            }
         }
     }
 };

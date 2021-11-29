@@ -51,16 +51,32 @@ class DbMovies extends Db
      * returns {Array} 
      */
     getActors() {
+ 
+        let actors = [];
+
+        this.data.forEach(movie => {
+            // movie.movie_actor
+            actors.push(movie.movie_actor);
+            actors.unshift(movie.movie_actress);
+        });
+
+        let result = [...new Set(actors)].sort();
+
+        return result;
 
     }
 
     /**
      * Get movies by actor/actress
-     * @param {String} _actor The actor to search
+     * @param {String} _actor The actor to search, may be partial... 
      * @returns {Array} The filtered collection
      */
     getMoviesByActor(_actor) {
-
+        return this.data.filter(
+            movie => 
+            movie.movie_actor.toLowerCase().includes(_actor.toLowerCase()) || 
+            movie.movie_actress.toLowerCase().includes(_actor.toLowerCase())
+        );
     }
 
     /**
