@@ -22,7 +22,15 @@
         </header>
     
         <main>
-            <h2>Movies Managment</h2>
+            <h1>Gestion des films</h1>
+
+            <section>
+                <h2>Ajouter une catégorie</h2>
+                <form name="addCatForm" action="admin.html" method="POST" @submit.prevent="addCategory">
+                    <input type="text" name="subject">
+                    <button type="submit">Valider</button>
+                </form>
+            </section>
             
         </main>
     

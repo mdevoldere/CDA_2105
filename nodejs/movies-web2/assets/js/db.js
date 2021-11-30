@@ -17,12 +17,12 @@ class Db
      */
     loadData() 
     {
-        fetch(this.url)
+        return fetch(this.url)
         .then((response) => {
             return response.json();
         }).then((json) => {
             this.data = json.data;
-            return thiss;
+            return this;
         });
     }
 }
