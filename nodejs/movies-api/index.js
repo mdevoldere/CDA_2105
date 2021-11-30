@@ -8,7 +8,7 @@ const router = express.Router();
 var json = require(__dirname + '/movies.json');
 
 app.use(cors({
-    origin: 'http://localhost:9000',
+    origin: 'http://localhost:10000',
     optionsSuccessStatus: 200
 }));
 
