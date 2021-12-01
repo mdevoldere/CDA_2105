@@ -5,7 +5,6 @@ const subjectsRoutes = require('./routes/subjects');
 const router = express.Router(); 
 const app = express();
 
-
 app.use(express.json());
 
 app.use(cors({

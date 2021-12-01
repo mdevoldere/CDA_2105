@@ -1,18 +1,7 @@
 // import express from 'express';
 const express = require('express');
-const mysql = require('mysql');
+const Subject = require('../models/Subject');
 
-/**
- * Crée l'objet qui permettra la connexion à la base de données
- * @var mysql.Connection database
- */
- const database = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'db_movies', // nom de la base de données
-    // port: 3306
-});
 
 const router = express.Router();
 
@@ -33,6 +22,12 @@ router.post('/', (req, res) => {
 
     /** Catégorie à ajouter (récupérée depuis le corps de la requête POST) */
     let newSubject = req.body.subject;
+
+    newSubject = new Subject({subject_name: req.body.subject})
+
+    if(newSubject.isValid()) {
+
+    }
     
     /** connexion à la base de données */
     database.connect((err) => {
@@ -43,7 +38,7 @@ router.post('/', (req, res) => {
         database.query(
             "INSERT INTO subjects (subject_name) VALUES (?);", [newSubject], (err, results) => {
                 // fermer la connexion dès que possible pour libérer la ressource
-                database.end();
+                //database.end();
 
                 if(err) {
                     res.json({error: "Erreur de requête (plantage sql ou erreur de syntaxe)"})
