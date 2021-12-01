@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const mysql = require('mysql');
+const subjectsRoutes = require('./routes/subjects');
 
 const router = express.Router(); 
 const app = express();
@@ -15,17 +15,9 @@ app.use(cors({
 
 var json = require(__dirname + '/movies.json');
 
-/**
- * Crée l'objet qui permettra la connexion à la base de données
- * @var mysql.Connection database
- */
-const database = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'db_movies', // nom de la base de données
-    // port: 3306
-});
+app.use('/subjects', subjectsRoutes);
+
+
 
 // console.log(database);
 
@@ -38,7 +30,9 @@ const database = mysql.createConnection({
 // });*/
 
 //npm install nodemon -g 
-//nodemon app.js pour lancer l'app
+//nodemon index.js pour lancer l'app
+
+
 
 app.get('/movies', (req, res) => {
     res.json(json)
@@ -53,46 +47,7 @@ app.get('/movies/:id', (req, res) => {
     res.json(movie)
 })
 
-app.post('/subjects', (req, res) => {
-    // console.log('BODY=' + req.body);
-    // res.json(req.body);
 
-    /** Catégorie à ajouter (récupérée depuis le corps de la requête POST) */
-    let newSubject = req.body.subject;
-    
-    /** connexion à la base de données */
-    database.connect((err) => {
-        if(err) {
-            res.json({error: "Erreur de connexion (serveur non lancé ou inaccessible)"}); 
-        }
-        /** requêtage  */
-        database.query(
-            "INSERT INTO subjects (subject_name) VALUES (?);", [newSubject], (err, results) => {
-                // fermer la connexion dès que possible pour libérer la ressource
-                database.end();
-
-                if(err) {
-                    res.json({error: "Erreur de requête (plantage sql ou erreur de syntaxe)"})
-                }
-
-                if(results.affectedRows < 1) {
-                    res.json({error: "Ligne non insérée (cause trigger; ou autre erreur non 'critique')"})
-                } 
-
-                // arrivé à ce point, tout s'est bien déroulé
-                // on renvoie le nouvel objet inséré
-
-                res.json({
-                    subject_id: results.insertId,
-                    subject_name: newSubject
-                });
-
-                console.log(results)
-        })
-    });
-
-    
-})
 
 
 app.listen(80);
