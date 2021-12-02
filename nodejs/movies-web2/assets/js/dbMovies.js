@@ -1,4 +1,5 @@
 import { Db } from './db.js';
+import { Movie } from './Movie.js';
 
 /**
  * DbMovies represents a collection of movies
@@ -12,6 +13,18 @@ class DbMovies extends Db
     constructor(_url) {
         super(_url);
         //this.loadData();
+    }
+
+    loadData() {
+        super.loadData().then(o => {
+            for(let i in this.data) {
+                this.data[i] = new Movie(this.data[i]);
+            }
+        }).then(() => {
+            console.log(this.data);
+        });
+
+        
     }
 
     /**
