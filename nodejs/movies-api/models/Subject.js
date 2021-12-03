@@ -2,8 +2,12 @@ const subject_sample = {
     subject_name: 'Comedy'
 };
 
+/**
+ * Model for subject 
+ */
 class Subject 
-{ 
+{
+    // take _subject parameter which is an literal object and build a new subject object from it 
     constructor(_subject) {
         /*if(_subject.subject_id !== undefined) {
             this.subject_id = _subject.subject_id;
@@ -21,6 +25,7 @@ class Subject
         this.subject_name = _subject.subject_name ?? '';
     }
 
+    // function that we will call before inserting the new subject in the database
     isValid() {
         return true;
     }

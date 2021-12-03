@@ -6,6 +6,12 @@ const config = require('./conf');
  * @var mysql.Connection database
  */ 
  const dbConnection = mysql.createPool(config);
+
+ dbConnection.getConnection((err, connection) => {
+     if(err) {
+         
+     }
+ } )
  // const database = mysql.createConnection(config);
 
 module.exports = dbConnection;

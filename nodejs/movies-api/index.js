@@ -12,8 +12,13 @@ app.use(cors({
     optionsSuccessStatus: 200
 }));
 
+/**
+ * @var Array
+ */
 var json = require(__dirname + '/movies.json');
 
+
+// API endpoints for all requets which includes '/subjects' 
 app.use('/subjects', subjectsRoutes);
 
 
