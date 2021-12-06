@@ -1,39 +1,41 @@
-class Fetcher 
-{
-    constructor() {
-        this.data = [];
+function isMajor(_age, _timeout) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(_age > 17) {
+                resolve({
+                    age: _age,
+                    message: "Il est majeur"
+                }); 
+            } else { 
+                reject("Il est mineur");
+            }
+        }, _timeout);
+        
+    });
+}
+
+class Toto {
+    isMajorSuccess(result) {
+        console.log(result.age + ": " + result.message);
     }
-
-    load() {
-
-        return fetch('https://devoldere.net/api/data/planes.json', {})
-        .then(response => {
-            //console.log(response);
-            return response.json();
-        })
-        .then(json => {
-            //console.log(json);
-            return json;
-        })
-        .catch(err => {
-
-        });
+    
+    static isMajorError(error) {
+        console.error(error);
     }
 }
 
-const myFetch = new Fetcher();
+let age = 23;
 
-function execdata(data) {
-    console.log('execData', data);
-}
+let toto = new Toto();
 
+isMajor(age, 3000)
+.then(result => {
+    
+})
+.catch(Toto.isMajorError);
 
-myFetch.load().then(execdata);
+isMajor(16, 1500)
+.then(toto.isMajorSuccess)
+.catch(Toto.isMajorError);
 
-myFetch.load().then(data => {
-    console.log('arrow', data);
-});
-
-myFetch.load().then(function(data) {
-    console.log('func', data);
-});
+console.log("OK");

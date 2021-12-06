@@ -1,0 +1,187 @@
+{
+    "result": "success",
+    "data": [
+        {
+            "id": 1,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-01 08:50:00",
+            "date_left": "2021-02-01 10:41:00"
+        },
+        {
+            "id": 2,
+            "registration": "BB-274-BB",
+            "car_id": 16,
+            "date_entry": "2021-02-01 09:50:00",
+            "date_left": "2021-02-01 10:54:00"
+        },
+        {
+            "id": 3,
+            "registration": "CA-789-BA",
+            "car_id": 21,
+            "date_entry": "2021-02-01 09:52:00",
+            "date_left": "2021-02-01 14:41:00"
+        },
+        {
+            "id": 4,
+            "registration": "CC-546-FV",
+            "car_id": 19,
+            "date_entry": "2021-02-01 10:07:00",
+            "date_left": "2021-02-01 14:41:00"
+        },
+        {
+            "id": 5,
+            "registration": "CG-274-ZG",
+            "car_id": 27,
+            "date_entry": "2021-02-01 10:23:00",
+            "date_left": "2021-02-01 14:41:00"
+        },
+        {
+            "id": 6,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-01 13:50:00",
+            "date_left": "2021-02-01 17:41:00"
+        },
+        {
+            "id": 7,
+            "registration": "ER-355-GX",
+            "car_id": 30,
+            "date_entry": "2021-02-01 13:59:00",
+            "date_left": "2021-02-01 15:17:00"
+        },
+        {
+            "id": 8,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-02 08:46:00",
+            "date_left": "2021-02-02 10:37:00"
+        },
+        {
+            "id": 9,
+            "registration": "FV-313-FT",
+            "car_id": 28,
+            "date_entry": "2021-02-02 11:44:00",
+            "date_left": "2021-02-02 16:41:00"
+        },
+        {
+            "id": 10,
+            "registration": "CC-546-FV",
+            "car_id": 19,
+            "date_entry": "2021-02-02 11:57:00",
+            "date_left": "2021-02-02 12:52:00"
+        },
+        {
+            "id": 11,
+            "registration": "CG-274-ZG",
+            "car_id": 27,
+            "date_entry": "2021-02-02 13:23:00",
+            "date_left": "2021-02-02 16:38:00"
+        },
+        {
+            "id": 12,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-02 13:53:00",
+            "date_left": "2021-02-02 17:42:00"
+        },
+        {
+            "id": 13,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-03 08:48:00",
+            "date_left": "2021-02-03 10:39:00"
+        },
+        {
+            "id": 14,
+            "registration": "DE-228-KS",
+            "car_id": 23,
+            "date_entry": "2021-02-03 09:08:00",
+            "date_left": "2021-02-03 19:00:00"
+        },
+        {
+            "id": 15,
+            "registration": "CF-614-PM",
+            "car_id": 26,
+            "date_entry": "2021-02-03 12:12:00",
+            "date_left": "2021-02-03 15:28:00"
+        },
+        {
+            "id": 16,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-03 13:41:00",
+            "date_left": "2021-02-03 17:30:00"
+        },
+        {
+            "id": 17,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-04 08:46:00",
+            "date_left": "2021-02-04 10:49:00"
+        },
+        {
+            "id": 18,
+            "registration": "FV-313-FT",
+            "car_id": 28,
+            "date_entry": "2021-02-04 11:21:00",
+            "date_left": "2021-02-04 16:12:00"
+        },
+        {
+            "id": 19,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-04 13:17:00",
+            "date_left": "2021-02-04 19:12:00"
+        },
+        {
+            "id": 20,
+            "registration": "CG-274-ZG",
+            "car_id": 27,
+            "date_entry": "2021-02-04 16:23:00",
+            "date_left": "2021-02-04 18:41:00"
+        },
+        {
+            "id": 21,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-05 08:31:00",
+            "date_left": "2021-02-05 10:37:00"
+        },
+        {
+            "id": 22,
+            "registration": "FV-313-FT",
+            "car_id": 28,
+            "date_entry": "2021-02-05 14:50:00",
+            "date_left": "2021-02-05 16:41:00"
+        },
+        {
+            "id": 23,
+            "registration": "DA-395-HE",
+            "car_id": 24,
+            "date_entry": "2021-02-05 15:02:00",
+            "date_left": "2021-02-05 15:41:00"
+        },
+        {
+            "id": 24,
+            "registration": "AA-123-AA",
+            "car_id": 12,
+            "date_entry": "2021-02-05 15:51:00",
+            "date_left": "2021-02-05 17:39:00"
+        },
+        {
+            "id": 25,
+            "registration": "CG-274-ZG",
+            "car_id": 27,
+            "date_entry": "2021-02-05 15:53:00",
+            "date_left": "2021-02-05 17:41:00"
+        },
+        {
+            "id": 26,
+            "registration": "AG-324-SY",
+            "car_id": 21,
+            "date_entry": "2021-02-05 15:59:00",
+            "date_left": "2021-02-01 17:27:00"
+        }
+    ]
+}
