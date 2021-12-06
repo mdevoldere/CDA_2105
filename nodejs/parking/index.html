@@ -11,7 +11,16 @@
 </head>
 <body>
     <div id="app">
-
+        <header>
+            <h1>{{ title }}</h1>
+            <input type="search" v-model="carSearch" v-on:input="searchChange">
+        </header>
+        <main>
+            <h2>{{ carSearch }}</h2>
+            <article v-for="car of cars">
+                {{ car.registration }}
+            </article>
+        </main>
     </div>
 </body>
 </html>
