@@ -1,158 +1,174 @@
 {
-    "result": "success",
+    "status": "success",
     "data": [
         {
-            "employee_id": 1,
-            "employee_manager": null,
-            "employee_lastname": "Holems",
-            "employee_firstname": "Cathy",
-            "employee_role": "Directrice",
-            "employee_salary": 100000,
-            "employee_hiredate": "2010-01-09"
+            "id": 1,
+            "employee_name": "Tiger Nixon",
+            "employee_salary": 320800,
+            "employee_age": 61,
+            "profile_image": ""
         },
         {
-            "employee_id": 2,
-            "employee_manager": 1,
-            "employee_lastname": "Mannheim",
-            "employee_firstname": "Luc",
-            "employee_role": "DRH",
-            "employee_salary": 87500,
-            "employee_hiredate": "2017-06-17"
+            "id": 2,
+            "employee_name": "Garrett Winters",
+            "employee_salary": 170750,
+            "employee_age": 63,
+            "profile_image": ""
         },
         {
-            "employee_id": 3,
-            "employee_manager": 2,
-            "employee_lastname": "Kipré",
-            "employee_firstname": "Abdou",
-            "employee_role": "RH",
-            "employee_salary": 42800,
-            "employee_hiredate": "2017-10-09"
+            "id": 3,
+            "employee_name": "Ashton Cox",
+            "employee_salary": 86000,
+            "employee_age": 66,
+            "profile_image": ""
         },
         {
-            "employee_id": 4,
-            "employee_manager": 2,
-            "employee_lastname": "Martin",
-            "employee_firstname": "Valérie",
-            "employee_role": "Comptable",
-            "employee_salary": 39500,
-            "employee_hiredate": "2018-03-30"
+            "id": 4,
+            "employee_name": "Cedric Kelly",
+            "employee_salary": 433060,
+            "employee_age": 22,
+            "profile_image": ""
         },
         {
-            "employee_id": 5,
-            "employee_manager": 1,
-            "employee_lastname": "Slezak",
-            "employee_firstname": "Daniel",
-            "employee_role": "DSI",
-            "employee_salary": 75000,
-            "employee_hiredate": "2011-09-09"
+            "id": 5,
+            "employee_name": "Airi Satou",
+            "employee_salary": 162700,
+            "employee_age": 33,
+            "profile_image": ""
         },
         {
-            "employee_id": 6,
-            "employee_manager": 5,
-            "employee_lastname": "Bahl",
-            "employee_firstname": "Tarik",
-            "employee_role": "Administrateur Système",
-            "employee_salary": 60000,
-            "employee_hiredate": "2014-04-08"
+            "id": 6,
+            "employee_name": "Brielle Williamson",
+            "employee_salary": 372000,
+            "employee_age": 61,
+            "profile_image": ""
         },
         {
-            "employee_id": 7,
-            "employee_manager": 5,
-            "employee_lastname": "Armanetti",
-            "employee_firstname": "Michaël",
-            "employee_role": "Administrateur Réseaux",
-            "employee_salary": 60000,
-            "employee_hiredate": "2014-05-06"
+            "id": 7,
+            "employee_name": "Herrod Chandler",
+            "employee_salary": 137500,
+            "employee_age": 59,
+            "profile_image": ""
         },
         {
-            "employee_id": 8,
-            "employee_manager": 5,
-            "employee_lastname": "Goldman",
-            "employee_firstname": "Estelle",
-            "employee_role": "Cheffe de projet",
-            "employee_salary": 55000,
-            "employee_hiredate": "2016-04-20"
+            "id": 8,
+            "employee_name": "Rhona Davidson",
+            "employee_salary": 327900,
+            "employee_age": 55,
+            "profile_image": ""
         },
         {
-            "employee_id": 9,
-            "employee_manager": 5,
-            "employee_lastname": "Durand",
-            "employee_firstname": "Gabriel",
-            "employee_role": "Chef de projet",
-            "employee_salary": 55000,
-            "employee_hiredate": "2016-12-02"
+            "id": 9,
+            "employee_name": "Colleen Hurst",
+            "employee_salary": 205500,
+            "employee_age": 39,
+            "profile_image": ""
         },
         {
-            "employee_id": 10,
-            "employee_manager": 8,
-            "employee_lastname": "Morel",
-            "employee_firstname": "Audrey",
-            "employee_role": "Développeuse",
-            "employee_salary": 46500,
-            "employee_hiredate": "2012-07-01"
+            "id": 10,
+            "employee_name": "Sonya Frost",
+            "employee_salary": 103600,
+            "employee_age": 23,
+            "profile_image": ""
         },
         {
-            "employee_id": 11,
-            "employee_manager": 8,
-            "employee_lastname": "Carpentier",
-            "employee_firstname": "Guillaume",
-            "employee_role": "Développeur Sénior",
-            "employee_salary": 58500,
-            "employee_hiredate": "2010-02-03"
+            "id": 11,
+            "employee_name": "Jena Gaines",
+            "employee_salary": 90560,
+            "employee_age": 30,
+            "profile_image": ""
         },
         {
-            "employee_id": 12,
-            "employee_manager": 9,
-            "employee_lastname": "Lefebvre",
-            "employee_firstname": "Hugo",
-            "employee_role": "Développeur",
-            "employee_salary": 42000,
-            "employee_hiredate": "2015-10-11"
+            "id": 12,
+            "employee_name": "Quinn Flynn",
+            "employee_salary": 342000,
+            "employee_age": 22,
+            "profile_image": ""
         },
         {
-            "employee_id": 13,
-            "employee_manager": 9,
-            "employee_lastname": "Sharif",
-            "employee_firstname": "Sonia",
-            "employee_role": "Développeuse Sénior",
-            "employee_salary": 54500,
-            "employee_hiredate": "2011-01-23"
+            "id": 13,
+            "employee_name": "Charde Marshall",
+            "employee_salary": 470600,
+            "employee_age": 36,
+            "profile_image": ""
         },
         {
-            "employee_id": 14,
-            "employee_manager": 15,
-            "employee_lastname": "Fournier",
-            "employee_firstname": "Sabrina",
-            "employee_role": "Commerciale",
-            "employee_salary": 42000,
-            "employee_hiredate": "2017-10-27"
+            "id": 14,
+            "employee_name": "Haley Kennedy",
+            "employee_salary": 313500,
+            "employee_age": 43,
+            "profile_image": ""
         },
         {
-            "employee_id": 15,
-            "employee_manager": 5,
-            "employee_lastname": "Bower",
-            "employee_firstname": "Sarah",
-            "employee_role": "Responsable Produit",
-            "employee_salary": 49500,
-            "employee_hiredate": "2018-05-22"
+            "id": 15,
+            "employee_name": "Tatyana Fitzpatrick",
+            "employee_salary": 385750,
+            "employee_age": 19,
+            "profile_image": ""
         },
         {
-            "employee_id": 16,
-            "employee_manager": 8,
-            "employee_lastname": "Dimario",
-            "employee_firstname": "Jordan",
-            "employee_role": "Développeur Junior",
-            "employee_salary": 32500,
-            "employee_hiredate": "2019-06-30"
+            "id": 16,
+            "employee_name": "Michael Silva",
+            "employee_salary": 198500,
+            "employee_age": 66,
+            "profile_image": ""
         },
         {
-            "employee_id": 17,
-            "employee_manager": 9,
-            "employee_lastname": "Macdowel",
-            "employee_firstname": "Cindy",
-            "employee_role": "Développeuse Junior",
-            "employee_salary": 32500,
-            "employee_hiredate": "2019-11-04"
+            "id": 17,
+            "employee_name": "Paul Byrd",
+            "employee_salary": 725000,
+            "employee_age": 64,
+            "profile_image": ""
+        },
+        {
+            "id": 18,
+            "employee_name": "Gloria Little",
+            "employee_salary": 237500,
+            "employee_age": 59,
+            "profile_image": ""
+        },
+        {
+            "id": 19,
+            "employee_name": "Bradley Greer",
+            "employee_salary": 132000,
+            "employee_age": 41,
+            "profile_image": ""
+        },
+        {
+            "id": 20,
+            "employee_name": "Dai Rios",
+            "employee_salary": 217500,
+            "employee_age": 35,
+            "profile_image": ""
+        },
+        {
+            "id": 21,
+            "employee_name": "Jenette Caldwell",
+            "employee_salary": 345000,
+            "employee_age": 30,
+            "profile_image": ""
+        },
+        {
+            "id": 22,
+            "employee_name": "Yuri Berry",
+            "employee_salary": 675000,
+            "employee_age": 40,
+            "profile_image": ""
+        },
+        {
+            "id": 23,
+            "employee_name": "Caesar Vance",
+            "employee_salary": 106450,
+            "employee_age": 21,
+            "profile_image": ""
+        },
+        {
+            "id": 24,
+            "employee_name": "Doris Wilder",
+            "employee_salary": 85600,
+            "employee_age": 23,
+            "profile_image": ""
         }
-    ]
+    ],
+    "message": "Successfully! All records has been fetched."
 }
