@@ -13,12 +13,18 @@
     <div id="app">
         <header>
             <h1>{{ title }}</h1>
-            <input type="search" v-model="carSearch" v-on:input="searchChange">
         </header>
         <main>
             <h2>{{ carSearch }}</h2>
+            <aside class="carmenu">
+                <h3>Rechercher un véhicule</h3>
+                <input type="search" v-model="carSearch" v-on:input="searchChange">
+                
+                <h3></h3>
+                <h3></h3>
+            </aside>
             <section class="carlist">
-                <article v-for="car of cars" class="card">
+                <article v-for="car of cars" v-if="cars.length > 0" class="card">
                     <div class="inner">
                         <div class="front">
                             <h3>{{ car.registration }}</h3>
@@ -28,11 +34,10 @@
                             <h3>{{ car.registration }}</h3>
                             Car backend...
                         </div>
-                        
                     </div>
                 </article>
+                <article class="card" v-else>Aucun résultat</article>
             </section>
-            
         </main>
     </div>
 </body>
