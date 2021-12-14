@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myinput" list="mylist" />
+    
+    <datalist id="mylist">
+      <option value="Valeur 1">Text1</option>
+      <option value="Valeur 2">Text2</option>
+    </datalist>
+    <script>
+        const opts = document.getElementById('mylist').childNodes;
+        const myinput = document.getElementById('myinput');
+        let eventSource = null;
+        let value = '';
+    
+        myinput.addEventListener('keydown', (e) => {
+            eventSource = e.key ? 'input' : 'list';
+        });
+
+        myinput.addEventListener('input', (e) => {
+        value = e.target.value;
+        if (eventSource === 'list') {
+            alert('CLICK ! ' + value);
+        }
+        });
+    </script>
+</body>
+</html>
