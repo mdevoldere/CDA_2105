@@ -5,26 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/cereals.css">
     <script src="assets/vue.global.js" defer></script>
-    <script src="assets/cereals.js" type="module"></script>
+    <script src="assets/app.js" type="module"></script>
     <title>Cereals</title>
 </head>
-<body>
+<body id="app">
     <header>
         <h1>Cereals</h1>
         <aside>
-
+            <fieldset>
+                <legend>Recherche</legend>
+                <input type="search" value="" placeholder="Nom du céréale">
+            </fieldset>
         </aside>
     </header>
     <main>
         <table>
             <thead>
                 <tr>
-
+                    <th><a data-col="id" @click="sortBy">ID</a></th>
+                    <th><a data-col="name" @click="sortBy">NOM</a></th>
+                    <th><a data-col="calories" @click="sortBy">CALORIES</a></th>
+                    <th>PROTEÏNES</th>
+                    <th>SEL</th>
+                    <th>FIBRES</th>
+                    <th>GLUCIDES</th>
+                    <th>SUCRES</th>
+                    <th>POTASSIUM</th>
+                    <th>VITAMINES</th>
+                    <th>ÉVALUATION</th>
+                    <th>NS</th>
+                    <th>DEL</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    
+                <tr v-for="cereal in cereals">
+                    <td>{{ cereal.id }}</td>
+                    <td>{{ cereal.name }}</td>
+                    <td>{{ cereal.calories }}</td>
+                    <td>{{ cereal.protein }}</td>
+                    <td>{{ cereal.sodium }}</td>
+                    <td>{{ cereal.fiber }}</td>
+                    <td>{{ cereal.carbo }}</td>
+                    <td>{{ cereal.sugars }}</td>
+                    <td>{{ cereal.potass }}</td>
+                    <td>{{ cereal.vitamins }}</td>
+                    <td>{{ cereal.rating }}</td>
+                    <td>{{ cereal.nutriscore }}</td>
+                    <td>X</td>
                 </tr>
             </tbody>
         </table>

@@ -19,3 +19,7 @@ h1 {
     color: var(--title);
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+
+a {
+    cursor: pointer;
+}

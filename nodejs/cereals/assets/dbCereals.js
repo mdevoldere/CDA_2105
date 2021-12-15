@@ -18,6 +18,10 @@ class DbCereals extends Db
         });
     }
 
+    sortBy(column, cereals) {
+        cereals.sort((a, b) => a[column] - b[column]);
+    }
+
     findByName(_name, _data) 
     {
         return _data.filter(
