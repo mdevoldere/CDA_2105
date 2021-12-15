@@ -1,0 +1,21 @@
+:root {
+    --bg: #111;
+    --txt: white;
+    --title: yellowgreen
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+    color: var(--txt);
+    background-color: var(--bg);
+}
+
+h1 {
+    color: var(--title);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
