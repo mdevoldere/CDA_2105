@@ -1,10 +1,11 @@
+
 import { DbCereals } from "./dbCereals.js";
 
 var cerealsApp = {
     data() {
         return {
             db: new DbCereals('/cereals.json'),
-            cereals: [],
+            cereals: [], 
             searchInput: "",
             categorySelect: "",
             nutriCheckbox: ["A", 'B', 'C', 'D', 'E'],
@@ -16,32 +17,52 @@ var cerealsApp = {
     },
 
     mounted() {
-        this.db.loadData().then(data => {
-            this.cereals = data;
-            console.log(data);
-        });
+        this.db.loadData().then(data => { 
+            this.cereals = data; 
+            //console.log(data); 
+        }); 
     },
 
     methods: {
 
-        sortBy(event) {
+        applyFilters() {
+            this.db.filterCereals(this.searchInput, this.categorySelect, this.nutriCheckbox)
+            .then(result => {
+                this.cereals = result;
+            });
+        },
+
+        sortBy(event) { 
             let column = event.target.dataset.col;
             this.cereals.sort((a, b) => a[column] - b[column]);
         },
 
-        findByName(event) {
+        findByName(event) { 
             this.searchInput = event.target.value;
-            this.db.filter(this.searchInput, this.categorySelect, this.nutriCheckbox);
+            //this.cereals = this.db.filterCereals(this.searchInput, this.categorySelect, this.nutriCheckbox);
+            this.applyFilters();
+            
         },
 
         findByCategory(event) {
+            let options = event.target.options;
 
-            this.db.filter(this.searchInput, this.categorySelect, this.nutriCheckbox);
+            this.categorySelect = options[event.target.selectedIndex].value;
+            this.applyFilters();
+            
         }, 
 
         findByNutriscore(event) {
-            
-            this.db.filter(this.searchInput, this.categorySelect, this.nutriCheckbox);
+            let val = event.target.value;
+            let checked = event.target.checked;
+
+            if(checked) {
+                this.nutriCheckbox.push(val);
+            } else {
+                this.nutriCheckbox = this.nutriCheckbox.filter(elem => val != elem);
+            }
+
+            this.applyFilters();
         },
 
         deleteById(event) {

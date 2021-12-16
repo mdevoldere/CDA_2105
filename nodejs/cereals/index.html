@@ -13,8 +13,28 @@
         <h1>Cereals</h1>
         <aside>
             <fieldset>
-                <legend>Recherche</legend>
-                <input type="search" value="" placeholder="Nom du céréale">
+                <legend>Rechercher</legend>
+                <input @input="findByName" type="search" value="" placeholder="Nom du céréale">
+            </fieldset>
+            <fieldset>
+                <legend>Filtrer</legend>
+                <fieldset>
+                    <legend>Nutriscore</legend>
+                    <label for="A">A</label><input @change="findByNutriscore" id="A" type="checkbox" value="A" checked> 
+                    <label for="B">B</label><input @change="findByNutriscore" id="B" type="checkbox" value="B" checked>
+                    <label for="C">C</label><input @change="findByNutriscore" id="C" type="checkbox" value="C" checked>
+                    <label for="D">D</label><input @change="findByNutriscore" id="D" type="checkbox" value="D" checked>
+                    <label for="E">E</label><input @change="findByNutriscore" id="E" type="checkbox" value="E" checked>
+                </fieldset>
+                <fieldset>
+                    <legend>Catégories</legend>
+                    <select @change="findByCategory">
+                        <option value="0">Tous</option>
+                        <option value="1">Sans sucre</option>
+                        <option value="2">Pauvre en sel</option>
+                        <option value="3">Boost</option>
+                    </select>
+                </fieldset>
             </fieldset>
         </aside>
     </header>
