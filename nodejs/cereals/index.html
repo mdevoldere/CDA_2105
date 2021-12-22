@@ -9,14 +9,14 @@
     <title>Cereals</title>
 </head>
 <body id="app">
-    <header>
+    <header class="header">
         <h1>Cereals</h1>
-        <aside>
+        <aside class="header-aside">
             <fieldset>
                 <legend>Rechercher</legend>
                 <input @input="findByName" type="search" value="" placeholder="Nom du céréale">
             </fieldset>
-            <fieldset>
+            <fieldset class="header-fieldset">
                 <legend>Filtrer</legend>
                 <fieldset>
                     <legend>Nutriscore</legend>
@@ -39,8 +39,8 @@
         </aside>
     </header>
     <main>
-        <table>
-            <thead>
+        <table class="list">
+            <thead class="sticky">
                 <tr>
                     <th><a data-col="id" @click="sortBy">ID</a></th>
                     <th><a data-col="name" @click="sortBy">NOM</a></th>
@@ -71,10 +71,13 @@
                     <td>{{ cereal.vitamins }}</td>
                     <td>{{ cereal.rating }}</td>
                     <td>{{ cereal.nutriscore }}</td>
-                    <td>X</td>
+                    <td>❌</td>
                 </tr>
             </tbody>
         </table>
     </main>
+    <footer>
+        <a id="totop" href="#">PASCAL's Button</a>
+    </footer>
 </body>
 </html>

@@ -73,3 +73,13 @@ var cerealsApp = {
 
 
 Vue.createApp(cerealsApp).mount('#app');
+
+
+window.addEventListener('scroll', (e) => {
+    console.log(window);
+    if(window.scrollY > 300) {
+        document.getElementById('totop').classList.add('active');
+    } else {
+        document.getElementById('totop').classList.remove('active');
+    }
+});
