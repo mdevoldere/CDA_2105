@@ -46,6 +46,11 @@ input[type="search"]:hover {
     border-color: fuchsia;
 }
 
+input[type="search"]:focus, input[type="search"]:active {
+    border-color: greenyellow;
+    outline: none;
+}
+
 option {
     background-color:gold;
     color: bisque;
