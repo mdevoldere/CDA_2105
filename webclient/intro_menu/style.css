@@ -16,7 +16,7 @@ body {
     list-style: none;
 }
 .menu {
-    margin-bottom: 3000px;
+    margin-bottom: 300px;
 }
 .menu > li {
     display: inline-block;
@@ -60,7 +60,7 @@ h1 {
 }
 
 h1 {
-    margin-bottom: 3000px;
+    margin-bottom: 30px;
 }
 
 .inline {
