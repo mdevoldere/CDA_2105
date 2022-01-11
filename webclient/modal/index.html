@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal</title>
     <link rel="stylesheet" href="modal.css">
-    <script src="vue.global.js"></script>
-    <script src="modal.js"></script>
+    <script src="vue.global.js" defer></script>
+    <script src="modal.js" defer></script>
 </head>
 <body id="app">
     <header>
         <h1>Modal</h1>
     </header>
     <main>
-        <a href=""
+        <a id="show-modal" href="#">click me</a>
     </main>
     <footer>
 
     </footer>
-    <div id="modal"></div>
+    <div id="modal">
+        <p class="modal-inner">Mon message</p>
+    </div>
 </body>
 </html>

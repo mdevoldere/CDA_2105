@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="modal.css">
+    <script src="vue.global.js" defer></script>
+    <script src="modal-vue.js" defer></script>
+</head>
+<body id="app">
+    <header>
+        <h1>Modal Vue</h1>
+    </header>
+    <main>
+        <a href="#" @click="showModal">click me</a>
+    </main>
+    <footer>
+
+    </footer>
+    <div id="modal" :class="{ active: modalActive }" @click="showModal">
+        <div class="modal-inner" @click="stopPropagation" id="stop">
+            <h2>Titre modal</h2>
+            <button class="modal-close" @click="showModal">X</button>
+            <p>Mon message</p>
+        </div>
+        
+    </div>
+</body>
+</html>
