@@ -6,16 +6,12 @@ const myApp = {
     },
     methods: {
         showModal(event) {
-            if(event.target.id !== 'stop') {
+            console.log(event);
+            event.stopPropagation();
+            if(event.target.dataset.id !== 'stop') {
                 this.modalActive = !this.modalActive
-            } else {
-                event.stopPropagation();
             }
-        },
-        stopPropagation() {
-
         }
-
     }
 }
 

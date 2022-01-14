@@ -19,12 +19,11 @@
 
     </footer>
     <div id="modal" :class="{ active: modalActive }" @click="showModal">
-        <div class="modal-inner" @click="stopPropagation" id="stop">
-            <h2>Titre modal</h2>
-            <button class="modal-close" @click="showModal">X</button>
-            <p>Mon message</p>
+        <div class="modal-inner" data-id="stop">
+            <h2 data-id="stop">Titre modal</h2>
+            <button class="modal-close">X</button>
+            <p data-id="stop">Mon message est un message plus long qui prendra plusieurs lignes parceque c'est VENDREDI !</p>
         </div>
-        
     </div>
 </body>
 </html>
