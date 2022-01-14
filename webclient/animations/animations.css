@@ -25,7 +25,81 @@ main {
 }
 
 .character {
+    background: url('img/char1.png');
+    background-size: cover;
+    width: 64px;
+    height: 64px;
     position: absolute;
-    top: 0;
+    top: 10rem;
     left: 8rem;
+    animation-name: characterMove;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    transform: scale(1);
 }
+
+@keyframes characterMove {
+    0% {
+        top: 1rem;
+        left: 8.5rem;
+        transform: scale(1);
+    }
+    10% {
+        top: 11rem;
+        left: 10rem;
+    }
+    20% {
+        left: 337px;
+        top:  310px;
+    }
+    30% {
+        left: 684px;
+        top: 474px ;
+    }
+    40% {
+        left: 790px;
+        top: 604px ;
+    }
+    50% {
+        left: 787px;
+        top: 840px ;
+    }
+    60%{
+        left: 650px;
+        top: 980px;     
+    }
+    70%{
+        left: 545px;
+        top: 980px;
+        transform: scale(1);
+    }
+    80%{
+        /*406 1052*/
+        left: 406;
+        top: 1052;
+        transform: scale(2);
+    }
+    100% {
+        top: 10rem;
+        left: 8rem;
+        transform: scale(1);
+    }
+}
+
+/*
+@keyframes characterMove {
+    from {
+        top: 0;
+        left: 0;
+        transform: rotate(0);
+        width: 64px;
+    }
+    to {
+        top: 10rem;
+        left: 8rem;
+        transform: rotate(360deg);
+        width: 100%;
+    }
+}*/
