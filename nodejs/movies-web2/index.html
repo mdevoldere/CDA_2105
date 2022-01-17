@@ -30,7 +30,13 @@
             
             <section v-if="page == 'all'" class="movies">
                 <h2>Tous les films</h2>
-                <movie v-for="mov of db.data" :info="mov"></movie>
+                <movie v-for="mov of moviesPerPage" :info="mov"></movie>
+                <nav class="pagination">
+                    <ol>
+                        <li v-for="pageNum in totalPages" :key="pageNum"><a href="#" @click="changePageClick" :class="{ active: pageNum == currentPage }">{{ pageNum }}</a></li>
+                    </ol>
+                    <p>Nombre total de pages: {{ totalPages }} ({{ db.data.length }} films)</p>
+                </nav>
             </section>
 
             <section v-if="page == 'cats'">
