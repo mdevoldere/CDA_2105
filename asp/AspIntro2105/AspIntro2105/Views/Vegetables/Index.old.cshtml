@@ -1,0 +1,18 @@
+﻿@using AspIntro2105.Models
+
+@{
+    /*List<Vegetable> grocery2 = (List<Vegetable>)ViewData["vegets"];*/
+
+    List<Vegetable>? grocery = ViewData["vegets"] as List<Vegetable>;
+}
+
+<h1>Liste des légumes</h1>
+
+
+@if(null != grocery)
+{
+    foreach(Vegetable item in grocery)
+    {
+        <p>@item.Name</p>
+    }
+}
