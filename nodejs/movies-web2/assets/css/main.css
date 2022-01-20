@@ -110,3 +110,29 @@ button, input[type="button"], input[type="submit"] {
         flex-basis: auto;
     }
 }
+
+.pagination {
+    width: 100%;
+}
+
+.pagination ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.pagination li {
+    margin-top: 1.5rem;
+}
+
+.pagination a {
+    padding: .5rem;
+    border: 1px solid pink;
+    border-radius: .3rem;
+}
+.pagination a.active {
+    border-color: lightgreen;
+    color: aqua;
+}

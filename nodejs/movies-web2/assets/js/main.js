@@ -17,11 +17,12 @@ const moviesApp = {
     data() {
         return {
             title: "Mes films",
-            db: new DbMovies('http://localhost/movies'), // cf DbMovies.js
+            db: new DbMovies('/movies.json'), // cf DbMovies.js
             page: "all", 
             cat: "",
             year: "",
             results: [],
+            currentPage: 1,
         };
     },
 
@@ -47,6 +48,19 @@ const moviesApp = {
         },
         moviesByActor(_actor) {
 
+        },
+        totalPages() {
+            return Math.ceil(this.db.data.length / 16);
+        },
+        moviesPerPage() {
+            let from;
+
+            if(this.currentPage > 1) {
+                from = ((this.currentPage-1)*16);
+            } else {
+                from = 0;
+            }
+            return this.db.data.slice(from, from+16);
         }
     },
 
@@ -73,6 +87,10 @@ const moviesApp = {
                 this.results = this.db.getMoviesByActor(val);
                 //console.log(val, results);
             }
+        },
+
+        changePageClick(event) {
+            this.currentPage = parseInt(event.target.innerText);
         }
     }
 };
