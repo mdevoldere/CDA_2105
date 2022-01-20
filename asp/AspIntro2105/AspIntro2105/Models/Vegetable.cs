@@ -1,8 +1,15 @@
-﻿namespace AspIntro2105.Models
+﻿
+
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AspIntro2105.Models
 {
+    [Table("Vegetables")]
     public class Vegetable
     {
-        public int Id { get; set; }
+        [Key]
+        public int VegetableId { get; set; }
 
         public string? Name { get; set; }
 

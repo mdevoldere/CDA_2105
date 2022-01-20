@@ -1,15 +1,43 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AspIntro2105.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspIntro2105.Controllers
 {
-    public class VegetablesController : Controller
+    public class VegetablesController : Controller 
     {
-        // GET: VegetablesController
-        // Lister tous les éléments
+        static private readonly List<Vegetable> vegetables;
+
+        static VegetablesController()
+        {
+            vegetables = new List<Vegetable>();
+
+            Vegetable banane = new Vegetable()
+            {
+                VegetableId = 1,
+                Name = "Banane",
+                Family = "F",
+                Price = 5.99
+            };
+
+            Vegetable orange = new Vegetable()
+            {
+                VegetableId = 2,
+                Name = "Orange",
+                Family = "F",
+                Price = 0.99
+            };
+
+            vegetables.Add(banane);
+            vegetables.Add(orange);
+        }
+
+        // GET: VegetablesController 
+        // Lister tous les éléments 
         public ActionResult Index()
         {
-            return View();
+            
+            return View(vegetables);
         }
 
         // GET: VegetablesController/Details/5
@@ -46,7 +74,9 @@ namespace AspIntro2105.Controllers
         // modifier un élément existant
         public ActionResult Edit(int id)
         {
-            return View();
+            Vegetable? result = vegetables.FirstOrDefault(item => item.VegetableId == id);
+
+            return View(result);
         }
 
         // POST: VegetablesController/Edit/5
@@ -57,6 +87,14 @@ namespace AspIntro2105.Controllers
         {
             try
             {
+                Vegetable? result = vegetables.FirstOrDefault(item => item.VegetableId == id);
+
+                if(result != null)
+                {
+                    /*result.Price = double.Parse(collection["Price"]);*/
+                    result.Price = Convert.ToDouble(collection["Price"]);
+                }
+
                 return RedirectToAction(nameof(Index));
             }
             catch

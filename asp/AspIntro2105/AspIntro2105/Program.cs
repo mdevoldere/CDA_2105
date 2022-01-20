@@ -19,5 +19,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+    // http://mondomaine.com/controller/action/id
 
 app.Run();
