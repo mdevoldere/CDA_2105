@@ -9,6 +9,7 @@ namespace AspIntro2105.Models
     public class Vegetable
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int VegetableId { get; set; }
 
         public string? Name { get; set; }

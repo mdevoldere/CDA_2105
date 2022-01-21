@@ -83,7 +83,7 @@ namespace AspIntro2105.Controllers
         // validation du formulaire d'édition
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Vegetable vegetable)
         {
             try
             {
@@ -92,7 +92,7 @@ namespace AspIntro2105.Controllers
                 if(result != null)
                 {
                     /*result.Price = double.Parse(collection["Price"]);*/
-                    result.Price = Convert.ToDouble(collection["Price"]);
+                    result.Price = Convert.ToDouble(vegetable.Price);
                 }
 
                 return RedirectToAction(nameof(Index));
