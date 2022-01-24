@@ -4,6 +4,7 @@ using AspIntro2105.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AspIntro2105.Migrations
 {
     [DbContext(typeof(VegetablesDbContext))]
-    partial class VegetablesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220121104044_AddCreated")]
+    partial class AddCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,22 +24,6 @@ namespace AspIntro2105.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("AspIntro2105.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Category");
-                });
-
             modelBuilder.Entity("AspIntro2105.Models.Vegetable", b =>
                 {
                     b.Property<int>("VegetableId")
@@ -45,9 +31,6 @@ namespace AspIntro2105.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VegetableId"), 1L, 1);
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime?>("Created")
                         .HasColumnType("datetime2");
@@ -63,20 +46,7 @@ namespace AspIntro2105.Migrations
 
                     b.HasKey("VegetableId");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("Vegetables");
-                });
-
-            modelBuilder.Entity("AspIntro2105.Models.Vegetable", b =>
-                {
-                    b.HasOne("AspIntro2105.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }
