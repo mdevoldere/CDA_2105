@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 namespace AppBank.DomainModel
 {
     [Table("banks")]
-    public class Bank
+    public class Bank : Model
     {
-        [Key]
+       /* [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public new int Id { get; set; }*/
         
         [Required]
         [DisplayName("Bank Name")]

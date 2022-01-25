@@ -15,5 +15,16 @@ namespace AppBank.DataAccessLayer
 
         public DbSet<Bank> Banks { get; set; }
         public DbSet<BankAgency> BankAgencies { get; set; }
+
+
+        /*public void test()
+        {
+            var bank = new Bank() { Name = "Bastien's Bank .Inc" };
+
+            Banks.Add(bank);
+
+            this.Set<Bank>();
+
+        }*/
     }
 }
