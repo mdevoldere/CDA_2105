@@ -8,14 +8,10 @@ using System.Threading.Tasks;
 
 namespace AppBank.DomainModel
 {
-    [Table("banks_agencies")]
-    public class BankAgency : Model
+    abstract public class Model
     {
-
-        public string AgencyName { get; set; }
-
-        
-        public Bank bank { get; set; }
-
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
     }
 }

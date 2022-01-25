@@ -1,4 +1,5 @@
 using AppBank.DataAccessLayer;
+using AppBank.DataAccessLayer.Repositories;
 using AppBank.DomainModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -12,6 +13,8 @@ namespace AppBank.Tests
     {
         private AppBankDbContext dbContext;
 
+        private IRepository<Bank> repository;
+
         private Bank oneBank;
 
         private List<Bank> banks;
@@ -19,6 +22,8 @@ namespace AppBank.Tests
         public Banks_Test()
         {
             this.dbContext = new AppBankDbContext();
+
+            this.repository = new Repository<Bank>(dbContext);
 
             this.oneBank = new Bank() { Name="Pascalou's Bank" };
 
@@ -28,21 +33,18 @@ namespace AppBank.Tests
                 new Bank() { Name="Crédit Jocelyn" }
             };
 
-            dbContext.Database.ExecuteSqlRaw("TRUNCATE TABLE banks");
+           // dbContext.Database.ExecuteSqlRaw("TRUNCATE TABLE banks");
         }
 
         [TestMethod]
         public void AddOneBank()
         {
-            dbContext.Banks.Add(oneBank);
+            Bank added = repository.Create(oneBank);
 
-            dbContext.SaveChanges();
-
-            Assert.AreEqual(1, dbContext.Banks.Count());
-
-            Bank result = dbContext.Banks.FirstOrDefault(b => b.Id == 1);
+            Bank? result = dbContext.Banks.FirstOrDefault(b => b.Name == oneBank.Name);
 
             Assert.IsNotNull(result);
+
             Assert.AreEqual(oneBank, result);
         }
     }
