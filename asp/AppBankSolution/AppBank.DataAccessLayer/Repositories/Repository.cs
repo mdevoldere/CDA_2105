@@ -8,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace AppBank.DataAccessLayer.Repositories
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Repository<T> : IRepository<T> where T : Model
     {
-        DbContext dbContext;
-        DbSet<T> dbset;
+        /// <summary>
+        /// readonly = l'attribut doit être initialisé dans le constructeur. 
+        /// La valeur ne peut plus être modifié après initialisation
+        /// </summary>
+        readonly DbContext dbContext;
+        readonly DbSet<T> dbset;
 
         public Repository(DbContext context) 
         {
@@ -21,14 +29,16 @@ namespace AppBank.DataAccessLayer.Repositories
 
         public T Create(T entity)
         {
+            // using AppBankDbContext dbContext = new AppBankDbContext();
             dbset.Add(entity);
             dbContext.SaveChanges();
             return entity;
+
         }
 
         public bool Delete(int id)
         {
-            var result= GetById(id);
+            var result = GetById(id);
 
             if (result != null)
             {
@@ -51,10 +61,10 @@ namespace AppBank.DataAccessLayer.Repositories
             return dbset.FirstOrDefault(x => x.Id == id);
         }
 
-        public async Task<T> Update(T entity) 
+        public T Update(T entity) 
         {
             dbset.Update(entity);
-            await dbContext.SaveChangesAsync(); 
+            dbContext.SaveChanges(); 
             return entity;
         }
 
