@@ -16,5 +16,7 @@ namespace AspIntro2105.Data
         }
 
         public DbSet<AspIntro2105.Models.Vegetable> Vegetables { get; set; }
+
+        public DbSet<AspIntro2105.Models.Category> Category { get; set; }
     }
 }
