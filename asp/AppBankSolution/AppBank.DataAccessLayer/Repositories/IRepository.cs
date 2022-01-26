@@ -11,12 +11,14 @@ namespace AppBank.DataAccessLayer.Repositories
     {
         T Create(T entity);
 
-        Task<T> Update(T entity);
+        T Update(T entity);
 
         IQueryable<T> GetAll();
 
         T GetById(int id);
 
         bool Delete(int id);
+
+        IQueryable<T> Search(Predicate<T> predicate);
     }
 }

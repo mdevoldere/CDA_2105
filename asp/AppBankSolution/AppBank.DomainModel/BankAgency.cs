@@ -11,11 +11,9 @@ namespace AppBank.DomainModel
     [Table("banks_agencies")]
     public class BankAgency : Model
     {
-
         public string AgencyName { get; set; }
 
-        
-        public Bank bank { get; set; }
+        public Bank Bank { get; set; }
 
     }
 }
