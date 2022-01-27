@@ -56,7 +56,7 @@ namespace AppBank.DataAccessLayer.Repositories
             return dbset;
         }
 
-        public T GetById(int id)
+        public T? GetById(int id)
         {
             return dbset.FirstOrDefault(x => x.Id == id);
         }

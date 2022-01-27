@@ -15,7 +15,7 @@ namespace AppBank.DataAccessLayer.Repositories
 
         IQueryable<T> GetAll();
 
-        T GetById(int id);
+        T? GetById(int id);
 
         bool Delete(int id);
 

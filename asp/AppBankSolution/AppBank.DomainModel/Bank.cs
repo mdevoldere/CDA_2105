@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,10 @@ namespace AppBank.DomainModel
     [Table("banks")]
     public class Bank : Model
     {
+
+        public Bank() {
+            Debug.WriteLine("toto");
+        }
        /* [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public new int Id { get; set; }*/
@@ -26,8 +31,7 @@ namespace AppBank.DomainModel
         [Range(0, 20, ErrorMessage = "")]
         public int NbCustomers { get; set; }
 
-
-        public ICollection<BankAgency> BankAgencies { get; set; }
+        public ICollection<BankAgency>? BankAgencies { get; set; }
 
 
     }

@@ -82,11 +82,11 @@ namespace AppBank.Tests
             {
                 int nb = repository.Search(x => x.Id == myBank.Id).Count();
 
-                Assert.AreEqual(0, nb, "Toto a fait échouer ce test");
+                Assert.AreEqual(0, nb, "La suppression a échoué !");
             }
             else
             {
-                throw new Exception("La suppression a échoué !");
+                throw new Exception("La suppression a planté !");
             }
         }
     }
