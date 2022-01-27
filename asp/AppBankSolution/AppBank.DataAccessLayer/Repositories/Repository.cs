@@ -48,7 +48,6 @@ namespace AppBank.DataAccessLayer.Repositories
             }
 
             return false;
-
         }
 
         public IQueryable<T> GetAll()
@@ -56,7 +55,7 @@ namespace AppBank.DataAccessLayer.Repositories
             return dbset;
         }
 
-        public T GetById(int id)
+        public T? GetById(int id)
         {
             return dbset.FirstOrDefault(x => x.Id == id);
         }

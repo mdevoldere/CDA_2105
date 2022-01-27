@@ -3,18 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBank", "AppBank\AppBank.csproj", "{D7E02163-33F7-43DA-B168-145EA6097351}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppBank", "AppBank\AppBank.csproj", "{D7E02163-33F7-43DA-B168-145EA6097351}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBank.DomainModel", "AppBank.DomainModel\AppBank.DomainModel.csproj", "{FA150B87-2AA2-4476-A7B1-812E708171D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppBank.DomainModel", "AppBank.DomainModel\AppBank.DomainModel.csproj", "{FA150B87-2AA2-4476-A7B1-812E708171D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBank.DataAccessLayer", "AppBank.DataAccessLayer\AppBank.DataAccessLayer.csproj", "{2968E998-C4A3-457A-B82F-21A29071F5D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppBank.DataAccessLayer", "AppBank.DataAccessLayer\AppBank.DataAccessLayer.csproj", "{2968E998-C4A3-457A-B82F-21A29071F5D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBank.Tests", "AppBank.Tests\AppBank.Tests.csproj", "{FD6F3C4E-90A4-463B-9B8D-B73D6AE81834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppBank.Tests", "AppBank.Tests\AppBank.Tests.csproj", "{FD6F3C4E-90A4-463B-9B8D-B73D6AE81834}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86FA8AEB-F9E4-4D94-BA7B-00F6D4F9E81C}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBank.Api", "AppBank.Api\AppBank.Api.csproj", "{1A18947A-C7F8-4479-9D3F-C18E74D9C066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{FD6F3C4E-90A4-463B-9B8D-B73D6AE81834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD6F3C4E-90A4-463B-9B8D-B73D6AE81834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD6F3C4E-90A4-463B-9B8D-B73D6AE81834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A18947A-C7F8-4479-9D3F-C18E74D9C066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A18947A-C7F8-4479-9D3F-C18E74D9C066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A18947A-C7F8-4479-9D3F-C18E74D9C066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A18947A-C7F8-4479-9D3F-C18E74D9C066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
