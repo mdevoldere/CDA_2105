@@ -48,7 +48,6 @@ namespace AppBank.DataAccessLayer.Repositories
             }
 
             return false;
-
         }
 
         public IQueryable<T> GetAll()
