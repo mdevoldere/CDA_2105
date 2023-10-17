@@ -17,7 +17,7 @@ const moviesApp = {
     data() {
         return {
             title: "Mes films",
-            db: new DbMovies('/movies.json'), // cf DbMovies.js
+            db: new DbMovies('./movies.json'), // cf DbMovies.js
             page: "all", 
             cat: "",
             year: "",

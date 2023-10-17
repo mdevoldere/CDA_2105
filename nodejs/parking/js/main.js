@@ -6,7 +6,7 @@ const parkingApp = {
     data() { 
         return {
             title: "Vue du Parking",
-            dbparking: new DbParking('https://devoldere.net/api/cars_park'),
+            dbparking: new DbParking('./cars_park.json'),
             cars: [],
             carSearch: "",
         } 

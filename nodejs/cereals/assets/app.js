@@ -4,7 +4,7 @@ import { DbCereals } from "./dbCereals.js";
 var cerealsApp = {
     data() {
         return {
-            db: new DbCereals('/cereals.json'),
+            db: new DbCereals('./cereals.json'),
             cereals: [], 
             searchInput: "",
             categorySelect: "",
